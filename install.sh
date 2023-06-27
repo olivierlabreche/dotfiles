@@ -6,4 +6,4 @@ DOTFILES_DIRECTORY_NAME=$([ $SPIN ] && echo "dotfiles")
 # Link custom dotfiles
 ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/.gitconfig ~/.gitconfig
 ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/.zshrc ~/.zshrc
-ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/.zshrc ~/git_prompt.zsh
+ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/git_prompt.zsh ~/git_prompt.zsh
