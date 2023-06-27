@@ -1,15 +1,4 @@
-# Enabling and setting git info var to be used in prompt config.
-autoload -Uz vcs_info
-# Enable substitution in the prompt.
-setopt prompt_subst
-zstyle ':vcs_info:*' enable git svn
-# This line obtains information from the vcs.
-zstyle ':vcs_info:git*' formats "- (%b%m) "
-precmd() {
-    vcs_info
-}
 zstyle ':vcs_info:git*+set-message:*' hooks git-aheadbehind
-
 # Show remote ref name and number of commits ahead-of or behind
 function +vi-git-aheadbehind() {
   local ahead behind
@@ -23,6 +12,3 @@ function +vi-git-aheadbehind() {
 
   hook_com[misc]=${(j::)gitstatus}
 }
-
-# Config for the prompt. PS1 synonym.
-prompt='%2/ ${vcs_info_msg_0_}%% '%
