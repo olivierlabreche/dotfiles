@@ -3,5 +3,7 @@ DOTFILES_DIRECTORY_NAME=$([ $SPIN ] && echo "dotfiles")
 
 # Symlink core configs
 
-# Link in the custom gitconfig.
+# Link custom dotfiles
 ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/.gitconfig ~/.gitconfig
+ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/.zshrc ~/.zshrc
+ln -vsfn ~/$DOTFILES_DIRECTORY_NAME/.zshrc ~/git_prompt.zsh
